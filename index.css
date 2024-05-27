@@ -5,30 +5,33 @@
 }
 
 html{
-    background-color: #E2F1E7;
+    background-color: #dfffe9;
 }
 
 .main-class{
     align-items: center;
     display: flex;
+    height: 100vh;
+
 }
 
 .main-content{
     display: flex;
     flex-direction: column;
-    padding: 40px;
-    width: 70%;
+    padding: 2rem;
+    width: 75%;
+    height: 90%;
     margin: 0 auto;
-    margin-top: 10rem;
     border-radius: 2rem;
+    gap: 1rem;
 
-    background-color: white;
+    background-color: rgb(238, 238, 238);
 
     font-family: "Roboto", sans-serif;
 }
 
 .main-title{
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 
 
     font-family: "Roboto", sans-serif;
@@ -38,5 +41,123 @@ html{
 
 .name-input-div{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
+
+.name-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-wrap label{
+    cursor: auto;
+}
+
+.input-name{
+    width: 29rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 2rem;
+}
+
+.email-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.email-wrap label{
+    cursor: auto;
+}
+
+.input-email{
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 2rem;
+}
+
+.query-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.query-wrap label{
+    cursor: auto;
+}
+
+.query-item{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border: 1px solid #797979;
+    padding: 1rem 9.9rem;
+    border-radius: 10px;
+
+    text-wrap: nowrap;
+}
+
+.query-item input, label{
+    cursor: pointer;
+}
+
+.checkbox-wrap{
+    display: flex;
+    gap: 1rem;
+}
+
+.txt-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-wrap label{
+    cursor: auto;
+}
+
+.txt-wrap textarea{
+    resize: none;
+
+    border-radius: 10px;
+    height: 5rem;
+}
+
+.submit-btn{
+    border: none;
+    background-color: #0C7C69;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.submit-btn:hover{
+    transform: scale(103%);
+    transition: .2s;
+}
+
+.required-tag{
+    color: #0C7C69;
+}
+
+@media screen and (max-width: 768px){
+    .main-class{
+        display: block;
+        height: 100vh;
+    }
+
+    .main-content{
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+
+    .name-wrap{
+        display: block;
+    }
+}
+    

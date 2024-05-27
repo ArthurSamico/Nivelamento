@@ -23,27 +23,47 @@
             <h2 class="main-title">Contact Us</h2>
 
             <div class="name-input-div">
-                <label for="first-name">First Name *</label>
-                <input type="text" class="input-first__name" required>
-                
-                <label for="last-name">Last Name *</label>
-                <input type="text" class="input-last__name" required>
+                <div class="name-wrap">
+                <label for="first-name">First Name <span class="required-tag">*</span></label>
+                <input type="text" class="input-name" required>
+                </div>
+
+                <div class="name-wrap">
+                    <label for="last-name">Last Name <span class="required-tag">*</span></label>
+                    <input type="text" class="input-name" required>
+                </div>
             </div>
-                
-            <label for="email">Email Address *</label>
-            <input type="text" class="input-email" required>
+            
+            <div class="email-wrap">
+                <label for="email">Email Address <span class="required-tag">*</span></label>
+                <input type="text" class="input-email" required>
+            </div>
 
             <div>
-                <input type="radio" name="query-tipe"> General Enquiry </input>
-                <input type="radio" name="query-tipe"> Support Request </input>
+                <label>Query Type <span class="required-tag">*</span></label>
+                <div class="query-wrap">
+                    <div class="query-item">
+                        <input type="radio" name="query-item" id="query-general" required/>
+                        <label for="query-general">General Enquiry</label>
+                    </div>
+                    <div class="query-item">
+                        <input type="radio" name="query-item" id="query-support"/>
+                        <label for="query-support">Support Request</label>
+                    </div>
+                </div>
             </div>
 
-            <label for="message">Message</label>
-            <textarea name="message" cols="30" rows="10"></textarea>
+            <div class="txt-wrap">
+                <label for="message">Message <span class="required-tag">*</span></label>
+                <textarea name="message" cols="30" rows="10" required placeholder="Ryan é bicha"></textarea>
+            </div>
 
-            <input type="checkbox" name="checkbox">I consent to being by the team *</input>
+            <div class="checkbox-wrap">
+                <input type="checkbox" name="checkbox" id="checkbox" required></input>
+                <label for="checkbox">I consent to being by the team <span class="required-tag">*</span></label>
+            </div>
 
-            <button>Submit</button>
+            <button class="submit-btn">Submit</button>
         </form>
     </main>
 </body>
