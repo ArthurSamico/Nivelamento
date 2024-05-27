@@ -1,163 +1,164 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    background-color: #dfffe9;
+html {
+  background-color: #dfffe9;
 }
 
-.main-class{
-    align-items: center;
-    display: flex;
-    height: 100vh;
-
+.main-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4vh 0;
 }
 
-.main-content{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    width: 75%;
-    height: 90%;
-    margin: 0 auto;
-    border-radius: 2rem;
-    gap: 1rem;
+.main-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    background-color: rgb(238, 238, 238);
-
-    font-family: "Roboto", sans-serif;
+  justify-content: center;
+  overflow: scroll;
 }
 
-.main-title{
-    padding-bottom: 1rem;
-
-
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 75%;
+  border-radius: 2rem;
+  gap: 1rem;
+  background-color: rgb(238, 238, 238);
+  font-family: 'Roboto', sans-serif;
 }
 
-.name-input-div{
-    display: flex;
-    justify-content: space-between;
+.main-title {
+  padding-bottom: 1rem;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.name-wrap{
-    display: flex;
-    flex-direction: column;
+.name-input-div {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
-.name-wrap label{
-    cursor: auto;
+.name-wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
-.input-name{
-    width: 29rem;
-    border: 1px solid gray;
-    border-radius: 5px;
-    height: 2rem;
+.name-wrap label {
+  cursor: auto;
 }
 
-.email-wrap{
-    display: flex;
-    flex-direction: column;
+.input-name {
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 2rem;
 }
 
-.email-wrap label{
-    cursor: auto;
+.email-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
-.input-email{
-    border: 1px solid gray;
-    border-radius: 5px;
-    height: 2rem;
+.email-wrap label {
+  cursor: auto;
 }
 
-.query-wrap{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+.input-email {
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 2rem;
 }
 
-.query-wrap label{
-    cursor: auto;
+.query-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.query-item{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    border: 1px solid #797979;
-    padding: 1rem 9.9rem;
-    border-radius: 10px;
-
-    text-wrap: nowrap;
+.query-item {
+  border: 1px solid #797979;
+  border-radius: 10px;
+  text-wrap: nowrap;
+  flex: 1;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  padding-left: 1rem;
 }
 
-.query-item input, label{
-    cursor: pointer;
+.query-item label,
+.query-item input {
+  cursor: pointer;
 }
 
-.checkbox-wrap{
-    display: flex;
-    gap: 1rem;
+.checkbox-wrap {
+  display: flex;
+  gap: 1rem;
 }
 
-.txt-wrap{
-    display: flex;
-    flex-direction: column;
+.txt-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
-.txt-wrap label{
-    cursor: auto;
+.txt-wrap label {
+  cursor: auto;
 }
 
-.txt-wrap textarea{
-    resize: none;
+.txt-wrap textarea {
+  resize: none;
 
-    border-radius: 10px;
-    height: 5rem;
+  border-radius: 10px;
+  height: 5rem;
 }
 
-.submit-btn{
-    border: none;
-    background-color: #0C7C69;
+.submit-btn {
+  border: none;
+  background-color: #0c7c69;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(103%);
+  transition: 0.2s;
+}
+
+.required-tag {
+  color: #0c7c69;
+}
+
+@media (max-width: 300px) {
+  body::before {
+    content: 'O tamanho da tela não é compatível para a exibição do site.';
+    display: block;
+    background-color: red;
     color: white;
-    padding: 1rem;
-    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+  }
 
-    font-size: 1rem;
-    letter-spacing: 2px;
-
-    cursor: pointer;
-    transition: .2s;
+  .main-content {
+    display: none;
+  }
 }
-
-.submit-btn:hover{
-    transform: scale(103%);
-    transition: .2s;
-}
-
-.required-tag{
-    color: #0C7C69;
-}
-
-@media screen and (max-width: 768px){
-    .main-class{
-        display: block;
-        height: 100vh;
-    }
-
-    .main-content{
-        display: block;
-        width: 90%;
-        margin: auto;
-    }
-
-    .name-wrap{
-        display: block;
-    }
-}
-    
